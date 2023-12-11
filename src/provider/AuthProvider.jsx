@@ -22,7 +22,7 @@ const AuthProvider = ({ children }) => {
   //   load terms and conditon data
   const [terms, setTerms] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:3000/terms")
+    fetch("https://the-news-dragon-server-1bqd2sont-ahsanulhoqueabir.vercel.app/terms")
       .then((res) => res.json())
       .then((data) => setTerms(data));
   }, []);

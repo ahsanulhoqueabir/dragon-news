@@ -4,7 +4,7 @@ const EditorInsights = ({ id }) => {
   // console.log(id);
   const [news, setNews] = useState([]);
   useEffect(() => {
-    fetch(`http://localhost:3000/categories/${id}`)
+    fetch(`https://the-news-dragon-server-1bqd2sont-ahsanulhoqueabir.vercel.app/categories/${id}`)
       .then((res) => res.json())
       .then((data) => setNews(data));
   });

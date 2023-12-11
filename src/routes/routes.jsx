@@ -20,13 +20,13 @@ const route = createBrowserRouter([
           {
             path: "/",
             element: <Category />,
-            loader: () => fetch("http://localhost:3000/categories/0"),
+            loader: () => fetch("https://the-news-dragon-server-1bqd2sont-ahsanulhoqueabir.vercel.app/categories/0"),
           },
           {
-            path: "/category/:id",
+            path: "/category/:cat",
             element: <Category />,
             loader: ({ params }) =>
-              fetch(`http://localhost:3000/categories/${params.id}`),
+              fetch(`https://the-news-dragon-server-1bqd2sont-ahsanulhoqueabir.vercel.app/categories/${params.cat}`),
           },
         ],
       },
@@ -38,7 +38,7 @@ const route = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:3000/news/${params.id}`),
+          fetch(`https://the-news-dragon-server-1bqd2sont-ahsanulhoqueabir.vercel.app/news/${params.id}`),
       },
     ],
   },
